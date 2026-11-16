@@ -1,5 +1,5 @@
 open Gfile
-    
+open Tools 
 let () =
 
   (* Check the number of command-line arguments *)
@@ -27,9 +27,9 @@ let () =
 
   (* Open file *)
   let graph = from_file infile in
-
+  let ngraph = clone_nodes graph in
   (* Rewrite the graph that has been read. *)
-  let () = write_file outfile graph in
+  let () = write_file outfile ngraph in
 
   ()
 
