@@ -1,0 +1,17 @@
+digraph finite_state_machine {
+fontname="Helvetica,Arial,sans-serif"
+node [fontname="Helvetica,Arial,sans-serif"]
+edge [fontname="Helvetica,Arial,sans-serif"]
+rankdir=LR;
+node [shape = circle];
+0 -> 2 [label = "S(8)"];
+0 -> 3 [label = "S(10)"];
+0 -> 1 [label = "S(7)"];
+2 -> 4 [label = "S(12)"];
+3 -> 4 [label = "S(5)"];
+3 -> 2 [label = "S(2)"];
+3 -> 1 [label = "S(11)"];
+1 -> 4 [label = "S(1)"];
+1 -> 5 [label = "S(21)"];
+4 -> 5 [label = "S(14)"];
+}

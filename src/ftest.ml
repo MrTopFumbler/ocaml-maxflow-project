@@ -1,5 +1,6 @@
 open Gfile
 open Tools 
+(*open Ford_fulkerson*)
 let () =
 
   (* Check the number of command-line arguments *)
@@ -27,9 +28,11 @@ let () =
 
   (* Open file *)
   let graph = from_file infile in
-  let ngraph = gmap graph (fun x -> x^"idhfiu") in
+  let ngraph = gmap graph (fun x -> "S("^x^")") in
   (* Rewrite the graph that has been read. *)
-  let () = write_file outfile ngraph in
+  let () = (*write_file outfile ngraph ;*)
+    export (outfile ^ ".gv") ngraph (fun str -> str);
+  in
 
   ()
 
